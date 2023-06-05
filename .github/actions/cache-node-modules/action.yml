@@ -1,0 +1,21 @@
+name: Cache Node Modules
+description: Cache node modules folder.
+
+inputs:
+  working-directory:
+    description: working directory
+    default: .
+    required: false
+outputs:
+  cache-hit:
+    description: Cache hit
+    value: ${{ steps.cache-node-modules.outputs.cache-hit }}
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/cache@v3
+      id: cache-node-modules
+      with:
+        path: ${{ inputs.working-directory }}/node_modules
+        key: ${{ runner.os }}-node-modules-${{ inputs.working-directory }}-${{ hashFiles(format('{0}/package-lock.json', inputs.working-directory)) }}
