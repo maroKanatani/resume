@@ -10,7 +10,7 @@
     "url": "git@github.com:maroKanatani/resume.git"
   },
   "author": "maroKanatani <16130443+Kanatani28@users.noreply.github.com>",
-  "dependencies": {
+  "devDependencies": {
     "md-to-pdf": "5.2.4"
   }
 }
