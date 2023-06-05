@@ -4,7 +4,8 @@
   "description": "maroKanataniの職務経歴書",
   "scripts": {
     "build:pdf": "md-to-pdf docs/README.md --config-file ./pdf-configs/config.js",
-    "lint": "textlint docs/README.md"
+    "lint": "textlint docs/README.md",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
