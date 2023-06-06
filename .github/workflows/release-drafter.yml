@@ -18,10 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/setup-node
-      - uses: ./.github/actions/cache-node-modules
-        id: cache-node-modules
-      - if: steps.cache-node-modules.outputs.cache-hit != 'true'
-        run: npm ci
+      - run: npm ci
       - name: build pdf
         run: npm run build:pdf
       - uses: release-drafter/release-drafter@v5
