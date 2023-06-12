@@ -1,4 +1,5 @@
 module.exports = {
+  dest: "./docs/職務経歴書.pdf",
   stylesheet: "./pdf-configs/style.css",
   body_class: "markdown-body",
   marked_options: {
