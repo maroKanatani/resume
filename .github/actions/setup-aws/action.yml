@@ -1,0 +1,19 @@
+name: setup aws credentials
+description: setup aws credentials
+
+runs:
+  using: composite
+  steps:
+    - uses: aws-actions/configure-aws-credentials@v2
+      with:
+        role-to-assume: ${{ env.RESUME_IAM_ROLE_ARN }}
+        role-session-name: ${{ github.event.repository.name }}-${{ github.run_id }}
+        aws-region: ap-northeast-1
+
+    - name: Set aws account id
+      run: echo "AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query 'Account' --output text)" >> $GITHUB_ENV
+      shell: bash
+
+    - name: Set ECR registry
+      run: echo "ECR_REGISTRY=${AWS_ACCOUNT_ID}.dkr.ecr.ap-northeast-1.amazonaws.com" >> $GITHUB_ENV
+      shell: bash
