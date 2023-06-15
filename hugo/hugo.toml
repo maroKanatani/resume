@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+# baseURL = 'http://example.org/'
 languageCode = 'ja-jp'
 title = '職務経歴書'
 theme = "cayman-hugo-theme"
