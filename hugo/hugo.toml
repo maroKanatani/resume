@@ -4,3 +4,7 @@ title = '職務経歴書'
 theme = "cayman-hugo-theme"
 [markup.goldmark.renderer]
   unsafe = true # Allow HTML in md files
+
+[params]
+  project_name = "職務経歴書"
+  project_tagline = "My resume, curriculum-vitae."
