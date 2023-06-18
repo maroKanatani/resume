@@ -3,3 +3,8 @@ node_modules
 **/*.pdf
 .idea
 .vscode
+
+# terraform
+terraform/.terraform
+terraform/terraform.tfvars
+terraform/terraform.tfstate*
