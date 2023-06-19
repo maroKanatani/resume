@@ -37,7 +37,7 @@ resource "aws_iam_role_policy" "resume_pdf_build" {
 }
 
 data "aws_iam_policy" "AmazonS3ReadOnlyAccess" {
-    arn = "arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess"
+  arn = "arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess"
 }
 
 resource "aws_iam_policy_attachment" "resume_pdf_build_attachment" {
