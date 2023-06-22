@@ -4,7 +4,9 @@ node_modules
 .idea
 .vscode
 
-# terraform
-terraform/.terraform
-terraform/terraform.tfvars
-terraform/terraform.tfstate*
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
