@@ -1,0 +1,25 @@
+version: 1
+applications:
+  - frontend:
+      phases:
+        preBuild:
+          # see https://github.com/aws-amplify/amplify-hosting/issues/884
+          commands:
+            - curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | grep "browser_download_url.*hugo_extended.*_Linux-64bit\.tar\.gz" | cut -d ":" -f 2,3 | tr -d '\\"' | wget -qi -
+            - tar -xzf "$(find . -name "*Linux-64bit.tar.gz")"
+            - chmod +x hugo
+            - mv hugo /usr/bin/hugo
+            - rm -rf "$(find . -name '*Linux-64bit.tar.gz')"
+            - hugo version
+            - aws s3api get-object --bucket ${CONTENT_BUCKET} --key index.md content/index.md
+        build:
+          commands:
+            - echo "baseURL = \"https://main.${AWS_APP_ID}.amplifyapp.com/\"" >> config.toml
+            - hugo
+      artifacts:
+        baseDirectory: public
+        files:
+          - "**/*"
+      cache:
+        paths: []
+    appRoot: hugo
