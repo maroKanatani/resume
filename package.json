@@ -16,7 +16,7 @@
     "@textlint-ja/textlint-rule-no-insert-dropping-sa": "2.0.1",
     "husky": "8.0.3",
     "md-to-pdf": "5.2.4",
-    "puppeteer": "20.5.0",
+    "puppeteer": "20.7.3",
     "textlint": "13.3.2",
     "textlint-filter-rule-allowlist": "4.0.0",
     "textlint-filter-rule-comments": "1.2.2",
