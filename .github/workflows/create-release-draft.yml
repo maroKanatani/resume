@@ -24,7 +24,7 @@ jobs:
       # TODO secretsを使う
       PASSWORD: test
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: ./.github/actions/setup-node
       - run: npm ci
       - name: build pdf

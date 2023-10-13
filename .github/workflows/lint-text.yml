@@ -11,7 +11,7 @@ jobs:
     name: lint text
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: ./.github/actions/setup-node
       - uses: ./.github/actions/cache-node-modules
         id: cache-node-modules
