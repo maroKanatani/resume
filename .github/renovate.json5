@@ -4,5 +4,22 @@
     "config:base"
   ],
   "timezone": "Asia/Tokyo",
-  "schedule": ["every 2 weeks on Saturday,Sunday"]
+  "schedule": ["every 2 weeks on Saturday,Sunday"],
+  "packageRules": [
+    {
+      groupName: "Terraform",
+      matchManagers: ["terraform", "terraform-version"],
+      automerge: false,
+      addLabels: ["iac"],
+      prBodyNotes: [
+          "<!-- プレビューしやすいように各セクションを分ける -->",
+          "### Additional Notes",
+          "{{{notes}}}",
+          "⚠️ Terraform Applyを実行するようにしてください",
+          "<!-- テンプレート変数の使用例 -->",
+          "Current version: {{{currentVersion}}}",
+          "New version: {{{newVersion}}}"
+      ]
+    },
+  ]
 }
