@@ -12,13 +12,8 @@
       automerge: false,
       addLabels: ["iac"],
       prBodyNotes: [
-          "<!-- プレビューしやすいように各セクションを分ける -->",
-          "### Additional Notes",
-          "{{{notes}}}",
-          "⚠️ Terraform Applyを実行するようにしてください",
-          "<!-- テンプレート変数の使用例 -->",
-          "Current version: {{{currentVersion}}}",
-          "New version: {{{newVersion}}}"
+          "### 👀 Checklist",
+          "- [ ] Terraform Applyを実行するようにしてください",
       ]
     },
   ]
