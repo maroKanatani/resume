@@ -14,7 +14,7 @@
   "author": "maroKanatani <16130443+Kanatani28@users.noreply.github.com>",
   "devDependencies": {
     "@textlint-ja/textlint-rule-no-insert-dropping-sa": "2.0.1",
-    "husky": "8.0.3",
+    "husky": "9.1.7",
     "md-to-pdf": "5.2.4",
     "puppeteer": "21.1.0",
     "textlint": "13.3.3",
